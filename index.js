@@ -2,6 +2,7 @@
 
 function getDogImages(num){
     console.log("In the getDogImages function. Number of images requested " + num);
+    clearImages();
     let getUrl = "https://dog.ceo/api/breeds/image/random/" + num;
     console.log(getUrl);
     fetch(getUrl)
@@ -16,6 +17,11 @@ function displayResults(responeJson){
         //console.log(responeJson.message[i]);
         addImage(responeJson.message[i]);
     }
+}
+
+function clearImages(){
+  console.log("in the clearimages function");
+  $('img').remove();
 }
 
 function addImage(message){
@@ -40,5 +46,6 @@ function watchForm(){
 
 $(function() {
 console.log('App loaded!');
+$('input').val(3);
 watchForm();
 });

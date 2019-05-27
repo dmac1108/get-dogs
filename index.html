@@ -8,14 +8,15 @@
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <h1>Display Dog Images</h1>
-    </header>
+    
 <main>
     <form>
-        <label for="num-images">Enter Number of Images to Display</label>
-        <input id="num-images" type="number">
-        <button type="submit">Submit</button>
+        <legend>Display Dog Images</legend>
+        <fieldset>
+            <label for="num-images">Enter Number of Images to Display</label>
+            <input id="num-images" type="number" type="number" min="1" max="50">
+            <button type="submit">Submit</button>
+        </fieldset>
     </form>
     <section role="article" class="js-image-section">
 
